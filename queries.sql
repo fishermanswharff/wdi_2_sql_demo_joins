@@ -192,7 +192,7 @@ SELECT * FROM books
 SELECT books.id, books.title, books.published_on, authors.name, authors.birthday FROM books
   LEFT OUTER JOIN authors
   ON (books.author_id = authors.id)
-  WHERE (authors.birthday  '1900-01-01');
+  WHERE (authors.birthday < '1900-01-01');
 
 /*
  id |              title              | published_on |        name         |  birthday  
